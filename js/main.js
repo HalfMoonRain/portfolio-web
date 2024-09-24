@@ -1,11 +1,16 @@
-let greeting = 'Hello, world!';
+// 팝업 열기 함수 추가
+function openWorkFlowPopup() {
+  window.open(
+    './images/work/NADIA WorkFlow.png',
+    'popup',
+    'width=3000,height=2550',
+  );
+}
 
-console.log(greetting);
-
-let nickname = '짐코딩';
-let hobby = ['헬스', '수영'];
-
-let person = {
-  nickname: nickname,
-  hobby: hobby,
-};
+function openArchitecturePopup() {
+  window.open(
+    './images/work/NADIA Architecture.png',
+    'popup',
+    'width=3250,height=2250',
+  );
+}

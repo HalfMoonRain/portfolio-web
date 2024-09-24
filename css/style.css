@@ -16,3 +16,8 @@ body {
 .font-weight-black {
   font-weight: 900;
 }
+
+.icon {
+  height: 50px;
+  width: 50px;
+}
