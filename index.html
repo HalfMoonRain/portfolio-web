@@ -16,30 +16,31 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <nav>
+    <header class="header">
+      <nav class="nav container">
         <!-- 이미지(로고) -->
-        <div>
-          <img src="./images/logo.jpg" alt="logo" />
-          <a href="#">짐코딩</a>
+        <div class="nav__logo">
+          <img class="nav__img" src="./images/logo.png" alt="logo" />
+          <a class="nav__brand" href="#">J.W Lee</a>
         </div>
+
         <!-- 메뉴 -->
-        <div>
-          <ul>
-            <li>
-              <a href="#home">Home</a>
+        <div class="nav__menu" id="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link active-link" href="#home">Home</a>
             </li>
-            <li>
-              <a href="#about">About</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">About</a>
             </li>
-            <li>
-              <a href="#skills">Skills</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#skills">Skills</a>
             </li>
-            <li>
-              <a href="#work">Work</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#work">Work</a>
             </li>
-            <li>
-              <a href="#contact">Contact</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -47,57 +48,73 @@
     </header>
     <main>
       <!--Home-->
-      <section id="home">
+      <section class="home container section" id="home">
         <!-- Home Data-->
-        <div>
-          <h2>
-            안녕하세요! <br />
-            <strong>백엔드 개발자</strong> <br />
-            <strong>이준우 </strong> 입니다! <br />
+        <div class="home__data">
+          <h2 class="home__title">
+            Hello World! <br />
+            <strong class="home__title-color">Backend Developer</strong> <br />
+            <strong class="home__title-color">Jun Woo</strong> Lee<br />
           </h2>
-          <a href="#contact">Contact</a>
-          <div>
+          <a href="#contact" class="button">Contact</a>
+          <div class="home__social">
             <a
               href="https://www.linkedin.com/in/jun-woo-lee-533a26328/"
               target="_blank"
               title="준우 링크드인 링크"
             >
-              <i class="fa-brands fa-linkedin"></i
+              <i class="fa-brands fa-linkedin home__social-icon"></i
             ></a>
             <a
               href="https://github.com/HalfMoonRain"
               target="_blank"
               title="준우 github 링크"
-              ><i class="fa-brands fa-github"></i
+              ><i class="fa-brands fa-github home__social-icon"></i
             ></a>
           </div>
         </div>
 
         <!-- Home Image -->
-        <div><img src="./images/Home/profile.jpg" alt="profile" /></div>
+        <img src="./images/Home/profile.jpg" alt="profile" class="home__img" />
       </section>
-      <!--About-->
-      <section id="about">
-        <h2>About</h2>
 
-        <div>
-          <div>
-            <img src="./images/about/about.jpg" alt="about img" />
-          </div>
-          <div>
-            <h3>저는 이렇게 답합니다</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-              mollitia fugit repellat quibusdam sunt earum explicabo totam.
-              Suscipit est, corporis quis ipsum consequuntur numquam voluptatem,
-              explicabo, corrupti sed esse repellendus.
+      <!--About-->
+      <section class="about section bg-grey-1" id="about">
+        <h2 class="section__title">About</h2>
+
+        <div class="about__container container">
+          <img
+            class="about__img"
+            src="./images/about/about.jpg"
+            alt="about img"
+          />
+
+          <!-- 문자열 -->
+          <div class="about__data">
+            <h3 class="about__subtitle">Passionate Backend Developer</h3>
+            <p class="about__text">
+              Backend Developer with 2 years of experience in designing and
+              developing web-based solutions using technologies such as Python,
+              Django, PostgreSQL, and Docker. I have had the opportunity to work
+              on the Nadia Project, where I contributed to implementing a
+              web-based hospital information system for the 4th hospital in
+              Uzbekistan over the course of two years. This project enhanced my
+              understanding of scalable backend systems and sharpened my
+              problem-solving skills in the healthcare sector. Additionally, I
+              have expanded my skill set by learning and applying FastAPI, which
+              enables me to create high-performance APIs with modern Python
+              frameworks. I am passionate about backend development, constantly
+              learning new tools and methodologies to improve performance,
+              security, and scalability in the projects I work on. Looking
+              forward to contributing to impactful projects with innovative
+              technologies.
             </p>
           </div>
         </div>
       </section>
       <!--skills-->
-      <section id="skills">
-        <h2>Skills</h2>
+      <section class="section" id="skills">
+        <h2 class="section__title">Skills</h2>
         <div>
           <!-- 스킬데이터 -->
           <div>
@@ -260,8 +277,8 @@
         </div>
       </section>
       <!--work-->
-      <section id="work">
-        <h2>Work</h2>
+      <section class="section" id="work">
+        <h2 class="section__title">Work</h2>
         <div>
           <a
             href="https://www.medworld.co.kr/news/articleView.html?idxno=227189"
@@ -285,8 +302,8 @@
         </div>
       </section>
       <!--contact-->
-      <section id="contact">
-        <h2>Contact</h2>
+      <section class="section" id="contact">
+        <h2 class="section__title">Contact</h2>
         <div>
           <form action="">
             <input type="text" placeholder="Name" required />
