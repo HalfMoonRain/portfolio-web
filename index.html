@@ -13,7 +13,9 @@
       src="https://kit.fontawesome.com/25e4db0b8b.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typeit@8.8.5/dist/index.umd.js"></script>
+    <title>JW Portfolio</title>
   </head>
   <body>
     <header class="header">
@@ -54,11 +56,7 @@
       <section class="home container section" id="home">
         <!-- Home Data-->
         <div class="home__data">
-          <h2 class="home__title">
-            Hello World! <br />
-            <strong class="home__title-color">Backend Developer</strong> <br />
-            <strong class="home__title-color">Jun Woo</strong> Lee<br />
-          </h2>
+          <h2 class="home__title" id="typeit"></h2>
           <a href="#contact" class="button">Contact</a>
           <div class="home__social">
             <a
@@ -229,7 +227,7 @@
             </article>
           </div>
           <div>
-            <article class="skills__data">
+            <article class="skills__data2">
               <div class="skills__names">
                 <!-- icon -->
                 <img class="icon" src="./images/icon/Django.png" alt="Django" />
@@ -247,7 +245,7 @@
                 value="90"
               ></progress>
             </article>
-            <article class="skills__data">
+            <article class="skills__data2">
               <div class="skills__names">
                 <!-- icon -->
                 <img
@@ -269,7 +267,7 @@
                 value="100"
               ></progress>
             </article>
-            <article class="skills__data">
+            <article class="skills__data2">
               <div class="skills__names">
                 <!-- icon -->
                 <img
@@ -291,7 +289,7 @@
                 value="80"
               ></progress>
             </article>
-            <article class="skills__data">
+            <article class="skills__data2">
               <div class="skills__names">
                 <!-- icon -->
                 <img
@@ -313,7 +311,7 @@
                 value="60"
               ></progress>
             </article>
-            <article class="skills__data">
+            <article class="skills__data2">
               <div class="skills__names">
                 <!-- icon -->
                 <img
@@ -413,7 +411,7 @@
           </form>
         </div>
       </section>
-      <button class="floating-button" id="floatingButton">
+      <button class="floating-button" id="floating-button">
         <i class="fa-solid fa-arrow-up floating-button-icon"></i>
       </button>
     </main>
