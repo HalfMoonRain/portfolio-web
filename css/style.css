@@ -90,6 +90,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
 }
 .nav {
   display: flex;
@@ -97,6 +98,7 @@ body {
   align-items: center;
   font-weight: var(--font-weight-black);
   height: var(--header-height);
+  z-index: inherit;
 }
 
 .nav__logo {
@@ -142,7 +144,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-5) 0;
+  padding-top: var(--spacing-5) 0;
+  padding-bottom: var(--spacing-5) 0;
 }
 
 .home__title {
@@ -240,4 +243,214 @@ body {
 .about__img {
   max-width: 310px;
   border-radius: 0.5rem;
+}
+
+/* Skills */
+.skills__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  align-items: center;
+}
+
+.skills__subtitle {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-black);
+  margin-bottom: var(--spacing-1);
+}
+.skills__text {
+  line-height: 1.4rem;
+}
+
+.skills__data {
+  box-shadow: var(--box-shadow-1);
+  border-radius: 0.3rem;
+  margin-top: var(--spacing-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0.8rem 1rem;
+  font-weight: var(--font-weight-bold);
+  overflow: hidden;
+  cursor: default;
+}
+.skills__names {
+  display: flex;
+  align-items: center;
+}
+.skills__icon {
+  font-size: var(--font-size-4);
+  margin-right: var(--spacing-2);
+  color: var(--primary-color);
+}
+.skills__progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  appearance: none;
+  height: 6px;
+  width: 100%;
+}
+
+.skills__progress::-webkit-progress-bar {
+  background: var(--white-color);
+  border-radius: 12px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.skills__progress::-webkit-progress-value {
+  background: var(--primary-color);
+  border-radius: 12px;
+  width: 48px;
+}
+
+/* Work */
+.work__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.work__img {
+  width: 100%;
+  transition: 0.5s;
+  display: block;
+}
+.work__name {
+  font-size: var(--font-size-3);
+  color: var(--secondary-color);
+  text-align: center;
+  font-weight: var(--font-weight-black);
+  margin-bottom: var(--spacing-5);
+}
+
+.work__link {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-1);
+}
+
+.work__img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact */
+.contact__container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__form {
+  width: 360px;
+}
+
+.contact__input {
+  width: 100%;
+  outline: none;
+  border: 1.5px solid var(--dark-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: var(--spacing-1);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-bold);
+}
+
+.contact__button {
+  margin-left: auto;
+  display: block;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 3rem 0;
+  font-weight: var(--font-weight-bold);
+}
+
+.footer__title {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-4);
+}
+
+.footer__social {
+  margin-bottom: var(--spacing-4);
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.footer__icon {
+  font-size: 1.2rem;
+}
+
+.footer__copy {
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Floating Button */
+.floating-button {
+  position: fixed;
+  color: var(--white-color);
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-1);
+  transition: 0.3s;
+}
+.floating-button:hover {
+  background-color: var(--dark-color);
+}
+
+.floating-button-icon {
+  font-size: 1.2rem;
+}
+
+.nav__toggle {
+  display: none;
+}
+.show {
+  right: 0 !important;
+}
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  :root {
+    --font-size-1: 2rem;
+    --font-size-2: 1.75rem;
+    --font-size-3: 1.5rem;
+    --font-size-4: 1.25rem;
+    --font-size-5: 0.938rem;
+    --font-size-6: 0.75rem;
+    --header-height: 3rem;
+  }
+  .nav__toggle {
+    display: block;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  .nav__menu {
+    position: fixed;
+    background-color: var(--dark-color);
+    height: 100%;
+    width: 80%;
+    top: var(--header-height);
+    right: -100%;
+    padding: 2rem;
+    transition: 0.2s;
+  }
+  .nav__list {
+    display: block;
+  }
+  .nav__item {
+    margin-left: 0;
+    margin-bottom: var(--spacing-4);
+  }
 }
